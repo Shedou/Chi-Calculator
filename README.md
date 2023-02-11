@@ -1,29 +1,29 @@
 # Chi-Calculator
 
-# Name
+### Name
 Chi Calculator
 
-# Description
+### Description
 An unusual cross-platform calculator.
 
-# Installation
+### Installation
 Windows/Linux: This is portable software.\
 Android: Install APK and enjoy.
 
-# Usage
+### Usage
 Windows: Run "exe" file and use.\
 Linux: Allow the executable to run as a program, then double-click it to run.
 
-# Visuals
+### Visuals
 Later.
 
-# Support
+### Support
 Later.
 
-# Roadmap
+### Roadmap
 Later.
 
-# License "Chi Calculator"
+### License "Chi Calculator"
 Chi Calculator\
 Copyright (C) 2023 Chimbal\
 This program is free software: you can redistribute it and/or modify\
@@ -37,8 +37,8 @@ GNU General Public License for more details.\
 You should have received a copy of the GNU General Public License\
 along with this program.  If not, see https://www.gnu.org/licenses/.
 
-# License "GODOT Engine"
+### License "GODOT Engine"
 GODOT Engine - https://godotengine.org/license
 
-# Project status
+### Project status
 In the work.
