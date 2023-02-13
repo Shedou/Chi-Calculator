@@ -14,7 +14,7 @@ Android: Install APK and enjoy.
 
 ### Usage Linux: - Download properly binary file for your architecture, set executable flag, and run.
 
-##№ Usage Android: - Install APK and use.
+### Usage Android: - Install APK and use.
 
 ### Visuals
 Later.
