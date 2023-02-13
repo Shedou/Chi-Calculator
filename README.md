@@ -11,11 +11,10 @@ Windows/Linux: This is portable software.\
 Android: Install APK and enjoy.
 
 ### Usage Windows: - Run "exe" file and use.
-![Screenshot_21](https://user-images.githubusercontent.com/19572158/218427251-a28f46bd-7ab5-4ef0-9562-02c451ae33ba.png)
 
 ### Usage Linux: - Download properly binary file for your architecture, set executable flag, and run.
 
-## Usage Android: - Install APK and use.
+##№ Usage Android: - Install APK and use.
 
 ### Visuals
 Later.
