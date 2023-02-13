@@ -23,6 +23,15 @@ Later.
 ### Roadmap
 Later.
 
+### BUILD and EDIT
+See "Build Tools for Chi Calculator".\
+(https://github.com/Shedou/Chi-Calculator/releases/tag/BuildTools)
+
+### Run on Windows without OpenGL 2.0 support
+See "mesa3d-22.3.5"\
+(https://github.com/Shedou/Chi-Calculator/releases/tag/Other)
+
+
 ### License "Chi Calculator"
 Chi Calculator\
 Copyright (C) 2023 Chimbal\
