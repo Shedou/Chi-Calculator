@@ -6,15 +6,24 @@ Chi Calculator
 ### Description
 An unusual cross-platform calculator.
 
+### System requirements
+- Windows 7 on newer (32-Bit/64-Bit).
+- Linux distributives (32-Bit/64-Bit).
+- Adnroid 4.4+ (ARM-v7a/ARM-v8a/x86/x86_64)
+- OpenGL/ES 2.0.
+
 ### Installation
-Windows/Linux: This is portable software.\
-Android: Install APK and enjoy.
+- Windows/Linux: This is portable software.
+- Android: Install APK and enjoy.
 
-### Usage Windows: - Run "exe" file and use.
+### Usage Windows:
+- Run "exe" file and use.
 
-### Usage Linux: - Download properly binary file for your architecture, set executable flag, and run.
+### Usage Linux:
+- Download properly binary file for your architecture, set executable flag, and run.
 
-### Usage Android: - Install APK and use.
+### Usage Android:
+- Install APK and use.
 
 ### Visuals
 Later.
