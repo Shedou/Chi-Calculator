@@ -6,7 +6,7 @@ Chi Calculator
 ### Description
 An unusual cross-platform calculator.
 
-### System requirements
+### System requirements:
 - Windows 7 on newer (32-Bit/64-Bit).
 - Linux distributives (32-Bit/64-Bit).
 - Adnroid 4.4+ (ARM-v7a/ARM-v8a/x86/x86_64)
