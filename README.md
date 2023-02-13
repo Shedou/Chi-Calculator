@@ -49,5 +49,8 @@ along with this program.  If not, see https://www.gnu.org/licenses/.
 ### License "GODOT Engine"
 GODOT Engine - https://godotengine.org/license
 
+### Other licenses
+Any third party programs are subject to their own licenses.
+
 ### Project status
 In the work.
