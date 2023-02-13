@@ -10,9 +10,13 @@ An unusual cross-platform calculator.
 Windows/Linux: This is portable software.\
 Android: Install APK and enjoy.
 
-### Usage
-Windows: Run "exe" file and use.\
-Linux: Allow the executable to run as a program, then double-click it to run.
+### Usage Windows: - Run "exe" file and use.\
+![Screenshot_21](https://user-images.githubusercontent.com/19572158/218427251-a28f46bd-7ab5-4ef0-9562-02c451ae33ba.png)
+
+### Usage Linux: - Allow this file to run as a program, then double-click it to run.\
+![Screenshot_22~](https://user-images.githubusercontent.com/19572158/218432404-b77ecc2f-6b7e-4f2e-891f-284cf73d5293.jpg)
+
+## Usage Android: - Install APK and use.
 
 ### Visuals
 Later.
@@ -22,6 +26,9 @@ Later.
 
 ### Roadmap
 Later.
+
+### Compiled executables
+(https://github.com/Shedou/Chi-Calculator/releases/tag/Builds)
 
 ### BUILD and EDIT
 See "Build Tools for Chi Calculator".\
