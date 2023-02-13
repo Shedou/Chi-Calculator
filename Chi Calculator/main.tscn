@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://FreeMono/FreeMonospaced.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 26
+outline_size = 1
+font_data = SubResource( 4 )
+
+[sub_resource type="ShortCut" id=2]
+
+[node name="window" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Write" type="TextEdit" parent="."]
+margin_left = 26.0
+margin_top = 9.0
+margin_right = 318.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 3 )
+readonly = true
+
+[node name="Out" type="TextEdit" parent="."]
+margin_left = 79.0
+margin_top = 66.0
+margin_right = 379.0
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 3 )
+readonly = true
+
+[node name="b1" type="Button" parent="."]
+margin_left = 55.0
+margin_top = 132.0
+margin_right = 116.0
+margin_bottom = 184.0
+rect_pivot_offset = Vector2( 55, 40 )
+shortcut = SubResource( 2 )
+text = "1"
+
+[node name="b2" type="Button" parent="."]
+margin_left = 128.0
+margin_top = 136.0
+margin_right = 185.0
+margin_bottom = 179.0
+rect_pivot_offset = Vector2( 55, 40 )
+shortcut = SubResource( 2 )
+text = "2"
+
+[node name="mult" type="Button" parent="."]
+margin_left = 252.0
+margin_top = 137.0
+margin_right = 311.0
+margin_bottom = 184.0
+text = "*"
+
+[node name="divis" type="Button" parent="."]
+margin_left = 331.0
+margin_top = 136.0
+margin_right = 405.0
+margin_bottom = 186.0
+text = "/"
+
+[node name="result" type="Button" parent="."]
+margin_left = 17.0
+margin_top = 68.0
+margin_right = 71.0
+margin_bottom = 117.0
+text = "="
+
+[node name="result2" type="Button" parent="."]
+margin_left = 331.0
+margin_top = 9.0
+margin_right = 385.0
+margin_bottom = 58.0
+text = "Clear"
+
+[connection signal="pressed" from="b1" to="." method="_on_b1_pressed"]
+[connection signal="pressed" from="b2" to="." method="_on_b2_pressed"]
+[connection signal="pressed" from="mult" to="." method="_on_mult_pressed"]
+[connection signal="pressed" from="divis" to="." method="_on_divis_pressed"]
+[connection signal="pressed" from="result" to="." method="_on_result_pressed"]
+[connection signal="pressed" from="result2" to="." method="_on_result2_pressed"]

@@ -1,0 +1,11 @@
+Software used to create parts of the project.
+================================================================
+Godot Engine v3.5.1 - https://godotengine.org
+- Project and code.
+================================================================
+Krita 5.1.5 - https://krita.org/en
+- icon.png
+================================================================
+Quick Any2Ico - https://www.carifred.com/quick_any2ico/
+- icon.ico
+================================================================
