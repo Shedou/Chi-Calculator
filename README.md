@@ -7,7 +7,7 @@ Chi Calculator
 An unusual cross-platform calculator.
 
 ### System requirements:
-- Windows 7 on newer (32-Bit/64-Bit).
+- Windows 7 or newer (32-Bit/64-Bit).
 - Linux distributives (32-Bit/64-Bit).
 - Adnroid 4.4+ (ARM-v7a/ARM-v8a/x86/x86_64)
 - OpenGL/ES 2.0.
@@ -33,9 +33,6 @@ Later.
 
 ### Roadmap
 Later.
-
-### Compiled executables
-(https://github.com/Shedou/Chi-Calculator/releases/tag/Builds)
 
 ### BUILD and EDIT
 See "Build Tools for Chi Calculator".\
