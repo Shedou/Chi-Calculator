@@ -73,3 +73,11 @@ func add_buffer(numb):
 	buffer = buffer + str(numb);
 	$Write.text = str(buffer);
 	
+
+
+func _on_LinkButton_pressed():
+	OS.shell_open("https://overclockers.ru/blog/Hard-Workshop");
+
+
+func _on_LinkButton2_pressed():
+	OS.shell_open("https://github.com/Shedou/Chi-Calculator");

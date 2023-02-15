@@ -77,9 +77,26 @@ margin_right = 385.0
 margin_bottom = 58.0
 text = "Clear"
 
+[node name="LinkButton" type="LinkButton" parent="."]
+margin_left = 8.0
+margin_top = 360.0
+margin_right = 289.0
+margin_bottom = 374.0
+rect_pivot_offset = Vector2( 141, 0 )
+text = "overclockers.ru/blog/Hard-Workshop"
+
+[node name="LinkButton2" type="LinkButton" parent="."]
+margin_left = 352.0
+margin_top = 369.0
+margin_right = 397.0
+margin_bottom = 383.0
+text = "GitHub"
+
 [connection signal="pressed" from="b1" to="." method="_on_b1_pressed"]
 [connection signal="pressed" from="b2" to="." method="_on_b2_pressed"]
 [connection signal="pressed" from="mult" to="." method="_on_mult_pressed"]
 [connection signal="pressed" from="divis" to="." method="_on_divis_pressed"]
 [connection signal="pressed" from="result" to="." method="_on_result_pressed"]
 [connection signal="pressed" from="result2" to="." method="_on_result2_pressed"]
+[connection signal="pressed" from="LinkButton" to="." method="_on_LinkButton_pressed"]
+[connection signal="pressed" from="LinkButton2" to="." method="_on_LinkButton2_pressed"]
