@@ -28,20 +28,13 @@ An unusual cross-platform calculator.
 ### Visuals
 Later.
 
-### Support
-Later.
-
-### Roadmap
-Later.
-
 ### BUILD and EDIT
-See "Build Tools for Chi Calculator".\
+See "Build Tools for Chi Calculator" (Windows).\
 (https://github.com/Shedou/Chi-Calculator/releases/tag/BuildTools)
 
 ### Run on Windows without OpenGL 2.0 support
 See "mesa3d-22.3.5"\
 (https://github.com/Shedou/Chi-Calculator/releases/tag/Other)
-
 
 ### License "Chi Calculator"
 Chi Calculator\
