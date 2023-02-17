@@ -1,102 +1,249 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://Theme_Buttons_Ops.tres" type="Theme" id=2]
+[ext_resource path="res://Theme_Buttons.tres" type="Theme" id=3]
 
 [sub_resource type="DynamicFontData" id=4]
 font_path = "res://FreeMono/FreeMonospaced.otf"
 
 [sub_resource type="DynamicFont" id=3]
-size = 26
+size = 20
 outline_size = 1
+outline_color = Color( 0.803922, 0.803922, 0.803922, 1 )
+extra_spacing_char = -1
 font_data = SubResource( 4 )
 
-[sub_resource type="ShortCut" id=2]
-
-[node name="window" type="Node2D"]
+[node name="Calculator" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Write" type="TextEdit" parent="."]
-margin_left = 26.0
-margin_top = 9.0
-margin_right = 318.0
-margin_bottom = 59.0
-custom_fonts/font = SubResource( 3 )
-readonly = true
+[node name="Container" type="Control" parent="."]
+margin_right = 420.0
+margin_bottom = 440.0
 
-[node name="Out" type="TextEdit" parent="."]
-margin_left = 79.0
-margin_top = 66.0
-margin_right = 379.0
-margin_bottom = 116.0
-custom_fonts/font = SubResource( 3 )
-readonly = true
+[node name="Number" type="Control" parent="Container"]
+margin_left = 20.0
+margin_top = 130.0
+margin_right = 240.0
+margin_bottom = 350.0
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="b1" type="Button" parent="."]
-margin_left = 55.0
-margin_top = 132.0
-margin_right = 116.0
-margin_bottom = 184.0
-rect_pivot_offset = Vector2( 55, 40 )
-shortcut = SubResource( 2 )
+[node name="Background" type="Panel" parent="Container/Number"]
+margin_left = -6.0
+margin_top = -6.0
+margin_right = 226.0
+margin_bottom = 226.0
+
+[node name="Num_1" type="Button" parent="Container/Number"]
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 97, 17 )
+theme = ExtResource( 3 )
 text = "1"
 
-[node name="b2" type="Button" parent="."]
-margin_left = 128.0
-margin_top = 136.0
-margin_right = 185.0
-margin_bottom = 179.0
-rect_pivot_offset = Vector2( 55, 40 )
-shortcut = SubResource( 2 )
+[node name="Num_2" type="Button" parent="Container/Number"]
+margin_left = 80.0
+margin_top = 120.0
+margin_right = 140.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 27, 17 )
+theme = ExtResource( 3 )
 text = "2"
 
-[node name="mult" type="Button" parent="."]
-margin_left = 252.0
-margin_top = 137.0
-margin_right = 311.0
-margin_bottom = 184.0
+[node name="Num_3" type="Button" parent="Container/Number"]
+margin_left = 160.0
+margin_top = 120.0
+margin_right = 220.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( -43, 17 )
+theme = ExtResource( 3 )
+text = "3"
+
+[node name="Num_4" type="Button" parent="Container/Number"]
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 97, 17 )
+theme = ExtResource( 3 )
+text = "4"
+
+[node name="Num_5" type="Button" parent="Container/Number"]
+margin_left = 80.0
+margin_top = 60.0
+margin_right = 140.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 27, 17 )
+theme = ExtResource( 3 )
+text = "5"
+
+[node name="Num_6" type="Button" parent="Container/Number"]
+margin_left = 160.0
+margin_top = 60.0
+margin_right = 220.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( -43, 17 )
+theme = ExtResource( 3 )
+text = "6"
+
+[node name="Num_7" type="Button" parent="Container/Number"]
+margin_right = 60.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 97, 17 )
+theme = ExtResource( 3 )
+text = "7"
+
+[node name="Num_8" type="Button" parent="Container/Number"]
+margin_left = 80.0
+margin_right = 140.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 27, 17 )
+theme = ExtResource( 3 )
+text = "8"
+
+[node name="Num_9" type="Button" parent="Container/Number"]
+margin_left = 160.0
+margin_right = 220.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -43, 17 )
+theme = ExtResource( 3 )
+text = "9"
+
+[node name="Num_0" type="Button" parent="Container/Number"]
+margin_top = 180.0
+margin_right = 140.0
+margin_bottom = 220.0
+rect_pivot_offset = Vector2( 97, 17 )
+theme = ExtResource( 3 )
+text = "0"
+
+[node name="Num_point" type="Button" parent="Container/Number"]
+margin_left = 160.0
+margin_top = 180.0
+margin_right = 220.0
+margin_bottom = 220.0
+rect_pivot_offset = Vector2( -43, 17 )
+theme = ExtResource( 3 )
+text = "."
+
+[node name="TextIO" type="Control" parent="Container"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 400.0
+margin_bottom = 110.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Panel" type="Panel" parent="Container/TextIO"]
+margin_left = -6.0
+margin_top = -6.0
+margin_right = 386.0
+margin_bottom = 96.0
+
+[node name="Text_Input" type="TextEdit" parent="Container/TextIO"]
+margin_right = 380.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 3 )
+readonly = true
+
+[node name="Text_Result" type="TextEdit" parent="Container/TextIO"]
+margin_top = 50.0
+margin_right = 380.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 3 )
+readonly = true
+
+[node name="Operand" type="Control" parent="Container"]
+margin_left = 260.0
+margin_top = 130.0
+margin_right = 400.0
+margin_bottom = 350.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Panel" type="Panel" parent="Container/Operand"]
+margin_left = -6.0
+margin_top = -6.0
+margin_right = 146.0
+margin_bottom = 226.0
+
+[node name="Multiple" type="Button" parent="Container/Operand"]
+margin_right = 60.0
+margin_bottom = 40.0
+theme = ExtResource( 2 )
 text = "*"
 
-[node name="divis" type="Button" parent="."]
-margin_left = 331.0
-margin_top = 136.0
-margin_right = 405.0
-margin_bottom = 186.0
-text = "/"
+[node name="Divide" type="Button" parent="Container/Operand"]
+margin_left = 80.0
+margin_right = 140.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 707, 353 )
+theme = ExtResource( 2 )
+text = "÷"
 
-[node name="result" type="Button" parent="."]
-margin_left = 17.0
-margin_top = 68.0
-margin_right = 71.0
-margin_bottom = 117.0
+[node name="Plus" type="Button" parent="Container/Operand"]
+margin_top = 60.0
+margin_right = 60.0
+margin_bottom = 100.0
+theme = ExtResource( 2 )
+text = "+"
+
+[node name="Minus" type="Button" parent="Container/Operand"]
+margin_left = 80.0
+margin_top = 60.0
+margin_right = 140.0
+margin_bottom = 100.0
+theme = ExtResource( 2 )
+text = "-"
+
+[node name="sqrt" type="Button" parent="Container/Operand"]
+margin_top = 120.0
+margin_right = 60.0
+margin_bottom = 160.0
+theme = ExtResource( 2 )
+text = "√"
+
+[node name="Percent" type="Button" parent="Container/Operand"]
+margin_left = 80.0
+margin_top = 120.0
+margin_right = 140.0
+margin_bottom = 160.0
+theme = ExtResource( 2 )
+text = "%"
+
+[node name="Result" type="Button" parent="Container/Operand"]
+margin_top = 180.0
+margin_right = 60.0
+margin_bottom = 220.0
+theme = ExtResource( 2 )
 text = "="
 
-[node name="result2" type="Button" parent="."]
-margin_left = 331.0
-margin_top = 9.0
-margin_right = 385.0
-margin_bottom = 58.0
-text = "Clear"
+[node name="AC" type="Button" parent="Container/Operand"]
+margin_left = 80.0
+margin_top = 180.0
+margin_right = 140.0
+margin_bottom = 220.0
+theme = ExtResource( 2 )
+text = "AC"
 
-[node name="LinkButton" type="LinkButton" parent="."]
-margin_left = 8.0
-margin_top = 360.0
-margin_right = 289.0
-margin_bottom = 374.0
+[node name="Link_Blog" type="LinkButton" parent="Container"]
+margin_left = 10.0
+margin_top = 420.0
+margin_right = 250.0
+margin_bottom = 434.0
 rect_pivot_offset = Vector2( 141, 0 )
 text = "overclockers.ru/blog/Hard-Workshop"
 
-[node name="LinkButton2" type="LinkButton" parent="."]
-margin_left = 352.0
-margin_top = 369.0
-margin_right = 397.0
-margin_bottom = 383.0
+[node name="Link_Git" type="LinkButton" parent="Container"]
+margin_left = 360.0
+margin_top = 420.0
+margin_right = 405.0
+margin_bottom = 434.0
 text = "GitHub"
 
-[connection signal="pressed" from="b1" to="." method="_on_b1_pressed"]
-[connection signal="pressed" from="b2" to="." method="_on_b2_pressed"]
-[connection signal="pressed" from="mult" to="." method="_on_mult_pressed"]
-[connection signal="pressed" from="divis" to="." method="_on_divis_pressed"]
-[connection signal="pressed" from="result" to="." method="_on_result_pressed"]
-[connection signal="pressed" from="result2" to="." method="_on_result2_pressed"]
-[connection signal="pressed" from="LinkButton" to="." method="_on_LinkButton_pressed"]
-[connection signal="pressed" from="LinkButton2" to="." method="_on_LinkButton2_pressed"]
+[connection signal="pressed" from="Container/Link_Blog" to="." method="_on_Link_Blog_pressed"]
+[connection signal="pressed" from="Container/Link_Git" to="." method="_on_Link_Git_pressed"]

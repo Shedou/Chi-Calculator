@@ -25,59 +25,61 @@ var buffer: String = "";
 var main_string = [];
 
 #func _ready():
-#	pass
 
 func _process(delta):
 	
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("numb_0"):
+		add_buffer("0");
+	if Input.is_action_just_pressed("numb_1"):
 		add_buffer("1");
-#	main_renderX = OS.get_window_safe_area().size.x;
-#	main_renderY = OS.get_window_safe_area().size.y;
-#
-#	$Write.margin_left = 20;
-#	$Write.margin_right = main_renderX - 20;
-#	$Write.margin_top = 20;
-#	$Write.margin_bottom = main_renderY - 20;
-#	yield(get_tree(), "idle_frame")
-
-func _on_b1_pressed():
-	add_buffer("1");
-
-func _on_b2_pressed():
-	add_buffer("2");
-
-func _on_mult_pressed():
-	add_buffer(" * ");
-
-func _on_divis_pressed():
-	add_buffer(" / ");
+	if Input.is_action_just_pressed("numb_2"):
+		add_buffer("2");
+	if Input.is_action_just_pressed("numb_3"):
+		add_buffer("3");
+	if Input.is_action_just_pressed("numb_4"):
+		add_buffer("4");
+	if Input.is_action_just_pressed("numb_5"):
+		add_buffer("5");
+	if Input.is_action_just_pressed("numb_6"):
+		add_buffer("6");
+	if Input.is_action_just_pressed("numb_7"):
+		add_buffer("7");
+	if Input.is_action_just_pressed("numb_8"):
+		add_buffer("8");
+	if Input.is_action_just_pressed("numb_9"):
+		add_buffer("9");
+	if Input.is_action_just_pressed("op_multiply"):
+		add_buffer(" * ");
+	if Input.is_action_just_pressed("op_divide"):
+		add_buffer(" / ");
+	if Input.is_action_just_pressed("ui_accept"):
+		_on_result_pressed();
+	if Input.is_action_just_pressed("backspace"):
+		_on_result2_pressed();
 
 func _on_result_pressed():
 	main_string = buffer.split(" ");
-	$Write.text = str(main_string);
+	$Container/TextIO/Text_Input.text = str(main_string);
 	
 	if main_string.has("*") || main_string.has("/"):
 		if main_string[1] == "*":
 			result = float(main_string[0]) * float(main_string[2]);
 		elif main_string[1] == "/":
 			result = float(main_string[0]) / float(main_string[2]);
-		$Out.text = str(result);
+		$Container/TextIO/Text_Result.text = str(result);
 	else:
 		pass
 
 func _on_result2_pressed():
 	buffer = "";
-	$Write.text = str(buffer);
+	$Container/TextIO/Text_Input.text = str(buffer);
 
 func add_buffer(numb):
 	buffer = buffer + str(numb);
-	$Write.text = str(buffer);
-	
+	$Container/TextIO/Text_Input.text = str(buffer);
 
-
-func _on_LinkButton_pressed():
+func _on_Link_Blog_pressed():
 	OS.shell_open("https://overclockers.ru/blog/Hard-Workshop");
 
-
-func _on_LinkButton2_pressed():
+func _on_Link_Git_pressed():
 	OS.shell_open("https://github.com/Shedou/Chi-Calculator");
