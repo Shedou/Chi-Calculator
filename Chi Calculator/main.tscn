@@ -41,7 +41,9 @@ margin_top = 120.0
 margin_right = 60.0
 margin_bottom = 160.0
 rect_pivot_offset = Vector2( 97, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "1"
 
 [node name="Num_2" type="Button" parent="Container/Number"]
@@ -50,7 +52,9 @@ margin_top = 120.0
 margin_right = 140.0
 margin_bottom = 160.0
 rect_pivot_offset = Vector2( 27, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "2"
 
 [node name="Num_3" type="Button" parent="Container/Number"]
@@ -59,7 +63,9 @@ margin_top = 120.0
 margin_right = 220.0
 margin_bottom = 160.0
 rect_pivot_offset = Vector2( -43, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "3"
 
 [node name="Num_4" type="Button" parent="Container/Number"]
@@ -67,7 +73,9 @@ margin_top = 60.0
 margin_right = 60.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 97, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "4"
 
 [node name="Num_5" type="Button" parent="Container/Number"]
@@ -76,7 +84,9 @@ margin_top = 60.0
 margin_right = 140.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( 27, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "5"
 
 [node name="Num_6" type="Button" parent="Container/Number"]
@@ -85,14 +95,18 @@ margin_top = 60.0
 margin_right = 220.0
 margin_bottom = 100.0
 rect_pivot_offset = Vector2( -43, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "6"
 
 [node name="Num_7" type="Button" parent="Container/Number"]
 margin_right = 60.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 97, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "7"
 
 [node name="Num_8" type="Button" parent="Container/Number"]
@@ -100,7 +114,9 @@ margin_left = 80.0
 margin_right = 140.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 27, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "8"
 
 [node name="Num_9" type="Button" parent="Container/Number"]
@@ -108,7 +124,9 @@ margin_left = 160.0
 margin_right = 220.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( -43, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "9"
 
 [node name="Num_0" type="Button" parent="Container/Number"]
@@ -116,7 +134,9 @@ margin_top = 180.0
 margin_right = 140.0
 margin_bottom = 220.0
 rect_pivot_offset = Vector2( 97, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "0"
 
 [node name="Num_point" type="Button" parent="Container/Number"]
@@ -125,7 +145,9 @@ margin_top = 180.0
 margin_right = 220.0
 margin_bottom = 220.0
 rect_pivot_offset = Vector2( -43, 17 )
+focus_mode = 0
 theme = ExtResource( 3 )
+enabled_focus_mode = 0
 text = "."
 
 [node name="TextIO" type="Control" parent="Container"]
@@ -137,17 +159,16 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Panel" type="Panel" parent="Container/TextIO"]
+[node name="Background" type="Panel" parent="Container/TextIO"]
 margin_left = -6.0
 margin_top = -6.0
 margin_right = 386.0
 margin_bottom = 96.0
 
 [node name="Text_Input" type="TextEdit" parent="Container/TextIO"]
-margin_right = 380.0
+margin_right = 340.0
 margin_bottom = 40.0
 custom_fonts/font = SubResource( 3 )
-readonly = true
 
 [node name="Text_Result" type="TextEdit" parent="Container/TextIO"]
 margin_top = 50.0
@@ -155,6 +176,15 @@ margin_right = 380.0
 margin_bottom = 90.0
 custom_fonts/font = SubResource( 3 )
 readonly = true
+
+[node name="Del" type="Button" parent="Container/TextIO"]
+margin_left = 345.0
+margin_right = 380.0
+margin_bottom = 40.0
+focus_mode = 0
+theme = ExtResource( 2 )
+enabled_focus_mode = 0
+text = "<"
 
 [node name="Operand" type="Control" parent="Container"]
 margin_left = 260.0
@@ -165,7 +195,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Panel" type="Panel" parent="Container/Operand"]
+[node name="Background" type="Panel" parent="Container/Operand"]
 margin_left = -6.0
 margin_top = -6.0
 margin_right = 146.0
@@ -174,7 +204,9 @@ margin_bottom = 226.0
 [node name="Multiple" type="Button" parent="Container/Operand"]
 margin_right = 60.0
 margin_bottom = 40.0
+focus_mode = 0
 theme = ExtResource( 2 )
+enabled_focus_mode = 0
 text = "*"
 
 [node name="Divide" type="Button" parent="Container/Operand"]
@@ -182,14 +214,18 @@ margin_left = 80.0
 margin_right = 140.0
 margin_bottom = 40.0
 rect_pivot_offset = Vector2( 707, 353 )
+focus_mode = 0
 theme = ExtResource( 2 )
+enabled_focus_mode = 0
 text = "÷"
 
 [node name="Plus" type="Button" parent="Container/Operand"]
 margin_top = 60.0
 margin_right = 60.0
 margin_bottom = 100.0
+focus_mode = 0
 theme = ExtResource( 2 )
+enabled_focus_mode = 0
 text = "+"
 
 [node name="Minus" type="Button" parent="Container/Operand"]
@@ -197,14 +233,18 @@ margin_left = 80.0
 margin_top = 60.0
 margin_right = 140.0
 margin_bottom = 100.0
+focus_mode = 0
 theme = ExtResource( 2 )
+enabled_focus_mode = 0
 text = "-"
 
 [node name="sqrt" type="Button" parent="Container/Operand"]
 margin_top = 120.0
 margin_right = 60.0
 margin_bottom = 160.0
+focus_mode = 0
 theme = ExtResource( 2 )
+enabled_focus_mode = 0
 text = "√"
 
 [node name="Percent" type="Button" parent="Container/Operand"]
@@ -212,14 +252,18 @@ margin_left = 80.0
 margin_top = 120.0
 margin_right = 140.0
 margin_bottom = 160.0
+focus_mode = 0
 theme = ExtResource( 2 )
+enabled_focus_mode = 0
 text = "%"
 
 [node name="Result" type="Button" parent="Container/Operand"]
 margin_top = 180.0
 margin_right = 60.0
 margin_bottom = 220.0
+focus_mode = 0
 theme = ExtResource( 2 )
+enabled_focus_mode = 0
 text = "="
 
 [node name="AC" type="Button" parent="Container/Operand"]
@@ -227,7 +271,9 @@ margin_left = 80.0
 margin_top = 180.0
 margin_right = 140.0
 margin_bottom = 220.0
+focus_mode = 0
 theme = ExtResource( 2 )
+enabled_focus_mode = 0
 text = "AC"
 
 [node name="Link_Blog" type="LinkButton" parent="Container"]
@@ -236,6 +282,7 @@ margin_top = 420.0
 margin_right = 250.0
 margin_bottom = 434.0
 rect_pivot_offset = Vector2( 141, 0 )
+enabled_focus_mode = 0
 text = "overclockers.ru/blog/Hard-Workshop"
 
 [node name="Link_Git" type="LinkButton" parent="Container"]
@@ -243,7 +290,35 @@ margin_left = 360.0
 margin_top = 420.0
 margin_right = 405.0
 margin_bottom = 434.0
+enabled_focus_mode = 0
 text = "GitHub"
 
+[node name="Version" type="Label" parent="Container"]
+margin_left = 360.0
+margin_top = 405.0
+margin_right = 400.0
+margin_bottom = 419.0
+text = "Ver."
+
+[connection signal="pressed" from="Container/Number/Num_1" to="." method="_on_Num_1_pressed"]
+[connection signal="pressed" from="Container/Number/Num_2" to="." method="_on_Num_2_pressed"]
+[connection signal="pressed" from="Container/Number/Num_3" to="." method="_on_Num_3_pressed"]
+[connection signal="pressed" from="Container/Number/Num_4" to="." method="_on_Num_4_pressed"]
+[connection signal="pressed" from="Container/Number/Num_5" to="." method="_on_Num_5_pressed"]
+[connection signal="pressed" from="Container/Number/Num_6" to="." method="_on_Num_6_pressed"]
+[connection signal="pressed" from="Container/Number/Num_7" to="." method="_on_Num_7_pressed"]
+[connection signal="pressed" from="Container/Number/Num_8" to="." method="_on_Num_8_pressed"]
+[connection signal="pressed" from="Container/Number/Num_9" to="." method="_on_Num_9_pressed"]
+[connection signal="pressed" from="Container/Number/Num_0" to="." method="_on_Num_0_pressed"]
+[connection signal="pressed" from="Container/Number/Num_point" to="." method="_on_Num_point_pressed"]
+[connection signal="pressed" from="Container/TextIO/Del" to="." method="_on_Del_pressed"]
+[connection signal="pressed" from="Container/Operand/Multiple" to="." method="_on_Multiple_pressed"]
+[connection signal="pressed" from="Container/Operand/Divide" to="." method="_on_Divide_pressed"]
+[connection signal="pressed" from="Container/Operand/Plus" to="." method="_on_Plus_pressed"]
+[connection signal="pressed" from="Container/Operand/Minus" to="." method="_on_Minus_pressed"]
+[connection signal="pressed" from="Container/Operand/sqrt" to="." method="_on_sqrt_pressed"]
+[connection signal="pressed" from="Container/Operand/Percent" to="." method="_on_Percent_pressed"]
+[connection signal="pressed" from="Container/Operand/Result" to="." method="_on_Result_pressed"]
+[connection signal="pressed" from="Container/Operand/AC" to="." method="_on_AC_pressed"]
 [connection signal="pressed" from="Container/Link_Blog" to="." method="_on_Link_Blog_pressed"]
 [connection signal="pressed" from="Container/Link_Git" to="." method="_on_Link_Git_pressed"]
