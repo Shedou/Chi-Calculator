@@ -17,7 +17,7 @@
 extends Node2D
 
 # Version
-var Version = "v2.1"
+var Version = "v2.2"
 
 # Deprecated
 var buffer: String = "";
@@ -92,23 +92,16 @@ func clear_input():
 
 func clear_last():
 	main_string = buffer.split(" ");
-	if op == "0":
+	if op == "0" && num2 == "0":
 		temp = str(main_string[0]);
 		temp.erase(temp.length() - 1, 1);
 		buffer = temp;
 		$Container/TextIO/Text_Input.text = str(buffer);
-	if op == "1" && num2 == "0":
-		if main_string.has("*") || main_string.has("/") || main_string.has("-") || main_string.has("+") || main_string.has("%"):
-			temp = str(main_string[0]) + str(main_string[1]);
-			temp.erase(temp.length() - 1, 1);
-			buffer = temp;
-			$Container/TextIO/Text_Input.text = str(buffer);
 	if op == "1" && num2 == "1":
-		if main_string.has("*") || main_string.has("/") || main_string.has("-") || main_string.has("+") || main_string.has("%"):
-			temp = str(main_string[0]) + str(main_string[1]) + str(main_string[2]);
-			temp.erase(temp.length() - 1, 1);
-			buffer = temp;
-			$Container/TextIO/Text_Input.text = str(buffer);
+		temp = str(main_string[2]);
+		temp.erase(temp.length() - 1, 1);
+		buffer = str(main_string[0]) + " " +str(main_string[1]) + " " + temp;
+		$Container/TextIO/Text_Input.text = str(buffer);
 
 func add_buffer(numb):
 	buffer = $Container/TextIO/Text_Input.text;
@@ -217,7 +210,6 @@ func _on_Minus_pressed():
 
 func _on_Result_pressed():
 	calc();
-	
 	calculated ="1";
 
 func _on_AC_pressed():
