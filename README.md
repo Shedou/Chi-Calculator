@@ -12,6 +12,24 @@ An unusual cross-platform calculator.
 - Adnroid 4.4+ (ARM-v7a/ARM-v8a/x86/x86_64)
 - OpenGL/ES 2.0.
 
+### Tested and working on systems (v2.2, VirtualBox 7.0.6):
+ - Linux x32:\
+ -- Debian 11.6.0 x32 - KDE\
+ -- ROSA Fresh 12.2 x32 - LXQT\
+ -- SalentOS 12.04.2 x32 - OpenBox\
+ -- Ubuntu 13.04 x32 - GNOME\
+ -- Lubuntu 17.10 x32 - Xfce
+ - Linux x64:\
+ -- Debian 11.6.0 x64 - Xfce\
+ -- ROSA Fresh 12.2 x64 - PLASMA 5\
+ -- SalentOS 12.04.2 x64 - OpenBox\
+ -- Ubuntu 13.04 x64 - GNOME\
+ -- Ubuntu 14.04.5 x64 - GNOME\
+ -- openSUSE 15.4 (B31.98) x64 - KDE\
+ -- EndeavourOS 22.12 x64 - Xfce\
+ -- Fedora 37-1.7 x64 GNOME - Wayland\
+ -- Simply Linux 10.1 x64 - Xfce - !!! Works x32 and x64 versions of the software !!!
+
 ### Installation
 - Windows/Linux: This is portable software.
 - Android: Install APK and enjoy.
