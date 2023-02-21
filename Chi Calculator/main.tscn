@@ -1,18 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://Theme_Buttons_Ops.tres" type="Theme" id=2]
 [ext_resource path="res://Theme_Buttons.tres" type="Theme" id=3]
-
-[sub_resource type="DynamicFontData" id=4]
-font_path = "res://FreeMono/FreeMonospaced.otf"
-
-[sub_resource type="DynamicFont" id=3]
-size = 20
-outline_size = 1
-outline_color = Color( 0.803922, 0.803922, 0.803922, 1 )
-extra_spacing_char = -1
-font_data = SubResource( 4 )
+[ext_resource path="res://Text_Input.gd" type="Script" id=4]
+[ext_resource path="res://Theme_Text.tres" type="Theme" id=5]
+[ext_resource path="res://Theme_Buttons_Ops_small.tres" type="Theme" id=6]
 
 [node name="Calculator" type="Node2D"]
 script = ExtResource( 1 )
@@ -160,6 +153,7 @@ __meta__ = {
 }
 
 [node name="Background" type="Panel" parent="Container/TextIO"]
+visible = false
 margin_left = -6.0
 margin_top = -6.0
 margin_right = 386.0
@@ -168,13 +162,15 @@ margin_bottom = 96.0
 [node name="Text_Input" type="TextEdit" parent="Container/TextIO"]
 margin_right = 340.0
 margin_bottom = 40.0
-custom_fonts/font = SubResource( 3 )
+theme = ExtResource( 5 )
+readonly = true
+script = ExtResource( 4 )
 
 [node name="Text_Result" type="TextEdit" parent="Container/TextIO"]
 margin_top = 50.0
 margin_right = 380.0
 margin_bottom = 90.0
-custom_fonts/font = SubResource( 3 )
+theme = ExtResource( 5 )
 readonly = true
 
 [node name="Del" type="Button" parent="Container/TextIO"]
@@ -272,9 +268,9 @@ margin_top = 180.0
 margin_right = 140.0
 margin_bottom = 220.0
 focus_mode = 0
-theme = ExtResource( 2 )
+theme = ExtResource( 6 )
 enabled_focus_mode = 0
-text = "AC"
+text = "C/AC"
 
 [node name="Link_Blog" type="LinkButton" parent="Container"]
 margin_left = 10.0
@@ -311,6 +307,8 @@ text = "Ver."
 [connection signal="pressed" from="Container/Number/Num_9" to="." method="_on_Num_9_pressed"]
 [connection signal="pressed" from="Container/Number/Num_0" to="." method="_on_Num_0_pressed"]
 [connection signal="pressed" from="Container/Number/Num_point" to="." method="_on_Num_point_pressed"]
+[connection signal="mouse_entered" from="Container/TextIO/Text_Input" to="Container/TextIO/Text_Input" method="_on_Text_Input_mouse_entered"]
+[connection signal="mouse_exited" from="Container/TextIO/Text_Input" to="Container/TextIO/Text_Input" method="_on_Text_Input_mouse_exited"]
 [connection signal="pressed" from="Container/TextIO/Del" to="." method="_on_Del_pressed"]
 [connection signal="pressed" from="Container/Operand/Multiple" to="." method="_on_Multiple_pressed"]
 [connection signal="pressed" from="Container/Operand/Divide" to="." method="_on_Divide_pressed"]
