@@ -17,7 +17,7 @@
 extends Node2D
 
 # Version
-var Version = "v2.4"
+var Version = "- Chi Calculator v2.5"
 
 # Strings
 var chi_str_buffer: String = "";
@@ -29,7 +29,7 @@ var chi_bool_operand: bool = false;		# Нажат ли операнд "*", "/", 
 var chi_bool_numb2: bool = false;		# Есть ли второе число
 var chi_bool_dot_1: bool = false;		# Наличие точки в первом числе
 var chi_bool_dot_2: bool = false;		# Наличие точки во втором числе
-var chi_bool_calculated: bool = false;	# Расчитано или нет
+var chi_bool_calculated: bool = false;	# Расчитано или нет (NOT USED!)
 
 var chi_shift = 0;
 
@@ -40,7 +40,15 @@ var Text_Input_Focus = 0;	# Наведен ли курсор на окно вв�
 var chi_na_temp;			# Временная переменная
 
 func _ready():
+	
 	$Container/Version.text = Version;
+
+#func _input(event):
+#	if event is InputEventMouseMotion:
+#		Engine.target_fps = 60;
+#	else:
+#		Engine.target_fps = 10;
+
 
 func add_buffer(numb):
 	chi_int_cAC = 0; # Костыль для правильной работы "C/AC"
@@ -108,7 +116,7 @@ func chi_calculate():
 	chi_int_cAC = 0; # Костыль для правильной работы "C/AC"
 	chi_str_buffer = $Container/TextIO/Text_Input.text; # Берем выражение из поля ввода если пользователь ввел вручную
 	chi_arr_temp = chi_str_buffer.split(" "); # Разделение строки на элементы и помещение в массив
-	chi_put_Text_Input(chi_arr_temp); # Показ содержимого массива
+#	chi_put_Text_Input(chi_arr_temp); # Показ содержимого массива
 
 	if chi_arr_temp.has("*") || chi_arr_temp.has("/") || chi_arr_temp.has("-") || chi_arr_temp.has("+") || chi_arr_temp.has("%"):
 		if chi_arr_temp[1] == "*":

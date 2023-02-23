@@ -273,27 +273,27 @@ enabled_focus_mode = 0
 text = "C/AC"
 
 [node name="Link_Blog" type="LinkButton" parent="Container"]
-margin_left = 10.0
+margin_left = 305.0
 margin_top = 420.0
-margin_right = 250.0
+margin_right = 410.0
 margin_bottom = 434.0
 rect_pivot_offset = Vector2( 141, 0 )
 enabled_focus_mode = 0
-text = "overclockers.ru/blog/Hard-Workshop"
+text = "Overclockers.ru"
 
 [node name="Link_Git" type="LinkButton" parent="Container"]
-margin_left = 360.0
+margin_left = 15.0
 margin_top = 420.0
-margin_right = 405.0
+margin_right = 60.0
 margin_bottom = 434.0
 enabled_focus_mode = 0
 text = "GitHub"
 
 [node name="Version" type="Label" parent="Container"]
-margin_left = 360.0
-margin_top = 405.0
-margin_right = 400.0
-margin_bottom = 419.0
+margin_left = 65.0
+margin_top = 420.0
+margin_right = 105.0
+margin_bottom = 434.0
 text = "Ver."
 
 [connection signal="pressed" from="Container/Number/Num_1" to="." method="_on_Num_1_pressed"]
