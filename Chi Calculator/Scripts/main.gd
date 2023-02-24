@@ -17,7 +17,7 @@
 extends Node2D
 
 # Version
-var Version = "- Chi Calculator v2.5"
+var Version = "- Chi Calculator v2.6"
 
 # Strings
 var chi_str_buffer: String = "";
@@ -32,23 +32,13 @@ var chi_bool_dot_2: bool = false;		# Наличие точки во втором
 var chi_bool_calculated: bool = false;	# Расчитано или нет (NOT USED!)
 
 var chi_shift = 0;
-
 var chi_int_cAC: int = 0;	# Костыль для работы "C/AC"
-
 var Text_Input_Focus = 0;	# Наведен ли курсор на окно ввода
-
 var chi_na_temp;			# Временная переменная
 
 func _ready():
-	
 	$Container/Version.text = Version;
-
-#func _input(event):
-#	if event is InputEventMouseMotion:
-#		Engine.target_fps = 60;
-#	else:
-#		Engine.target_fps = 10;
-
+	
 
 func add_buffer(numb):
 	chi_int_cAC = 0; # Костыль для правильной работы "C/AC"

@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://Theme_Buttons_Ops.tres" type="Theme" id=2]
 [ext_resource path="res://Theme_Buttons.tres" type="Theme" id=3]
-[ext_resource path="res://Text_Input.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Text_Input.gd" type="Script" id=4]
 [ext_resource path="res://Theme_Text.tres" type="Theme" id=5]
 [ext_resource path="res://Theme_Buttons_Ops_small.tres" type="Theme" id=6]
+[ext_resource path="res://Theme_Text_small.tres" type="Theme" id=7]
 
 [node name="Calculator" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,11 +15,15 @@ script = ExtResource( 1 )
 margin_right = 420.0
 margin_bottom = 440.0
 
+[node name="Settings" type="Control" parent="Container"]
+margin_right = 420.0
+margin_bottom = 440.0
+
 [node name="Number" type="Control" parent="Container"]
 margin_left = 20.0
-margin_top = 130.0
+margin_top = 180.0
 margin_right = 240.0
-margin_bottom = 350.0
+margin_bottom = 400.0
 __meta__ = {
 "_edit_group_": true
 }
@@ -145,15 +150,14 @@ text = "."
 
 [node name="TextIO" type="Control" parent="Container"]
 margin_left = 20.0
-margin_top = 20.0
+margin_top = 70.0
 margin_right = 400.0
-margin_bottom = 110.0
+margin_bottom = 160.0
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Background" type="Panel" parent="Container/TextIO"]
-visible = false
 margin_left = -6.0
 margin_top = -6.0
 margin_right = 386.0
@@ -184,9 +188,9 @@ text = "<"
 
 [node name="Operand" type="Control" parent="Container"]
 margin_left = 260.0
-margin_top = 130.0
+margin_top = 180.0
 margin_right = 400.0
-margin_bottom = 350.0
+margin_bottom = 400.0
 __meta__ = {
 "_edit_group_": true
 }
@@ -271,6 +275,26 @@ focus_mode = 0
 theme = ExtResource( 6 )
 enabled_focus_mode = 0
 text = "C/AC"
+
+[node name="Button_Settings" type="Button" parent="Container"]
+margin_left = 90.0
+margin_top = 15.0
+margin_right = 190.0
+margin_bottom = 55.0
+focus_mode = 0
+theme = ExtResource( 7 )
+enabled_focus_mode = 0
+text = "Settings"
+
+[node name="Button_About" type="Button" parent="Container"]
+margin_left = 230.0
+margin_top = 15.0
+margin_right = 330.0
+margin_bottom = 55.0
+focus_mode = 0
+theme = ExtResource( 7 )
+enabled_focus_mode = 0
+text = "About"
 
 [node name="Link_Blog" type="LinkButton" parent="Container"]
 margin_left = 305.0
