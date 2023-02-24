@@ -28,7 +28,8 @@ An unusual cross-platform calculator.
  -- openSUSE 15.4 (B31.98) x64 - KDE\
  -- EndeavourOS 22.12 x64 - Xfce\
  -- Fedora 37-1.7 x64 GNOME - Wayland\
- -- Simply Linux 10.1 x64 - Xfce - !!! Works x32 and x64 versions of the software !!!
+ -- Simply Linux 10.1 x64 - Xfce - !!! Works x32 and x64 versions of the software !!!\
+ -- Slackware 15.0 x64 - KDE
 
 ### Installation
 - Windows/Linux: This is portable software.
