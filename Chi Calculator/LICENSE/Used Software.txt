@@ -4,8 +4,9 @@ Godot Engine v3.5.1 - https://godotengine.org
 - Project and code.
 ================================================================
 Krita 5.1.5 - https://krita.org/en
-- icon.png
+- icon.png - ver. 2023-02-17, MD5: E81956F9E49180CE4034E84CD9A7E870, Размер: 24333 байтов (23 KiB).
+- And other.
 ================================================================
 Quick Any2Ico - https://www.carifred.com/quick_any2ico/
-- icon.ico
+- icon.ico - ver. 2023-02-17, MD5: 6CE9117629910C170F011583103C6621, Размер: 49399 байтов (48 KiB).
 ================================================================

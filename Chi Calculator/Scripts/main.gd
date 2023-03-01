@@ -17,7 +17,10 @@
 extends Node2D
 
 # Version
-var Version = "- Chi Calculator v2.6"
+var Version = "Chi Calculator v2.7"
+var License = "GNU GPL v3 or later"
+var Other = "Chimbal";
+
 
 # Strings
 var chi_str_buffer: String = "";
@@ -38,6 +41,10 @@ var chi_na_temp;			# Временная переменная
 
 func _ready():
 	$Container/Version.text = Version;
+	$Container/License.text = License;
+	$About/Text/Name.text = Version;
+	$About/Text/License.text = License;
+	$About/Text/Other.text = Other;
 	
 
 func add_buffer(numb):
@@ -98,7 +105,7 @@ func calc_sqrt():
 	if chi_arr_temp[1] == "√":
 		chi_float_result = sqrt(float(chi_arr_temp[0]));
 	chi_put_Text_Output(chi_float_result);
-	chi_str_buffer = str(chi_float_result);
+	#chi_str_buffer = str(chi_float_result);
 
 #
 # Функция общих вычислений
@@ -302,3 +309,13 @@ func _on_Num_point_pressed():
 	
 # Numbers
 #
+
+#
+# Кнопка включения окна About
+func _on_Button_About_pressed():
+	$About.visible = true;
+
+
+func _on_Button_Settings_pressed():
+	$Settings.visible = true;
+
