@@ -17,7 +17,7 @@
 extends Node2D
 
 # Version
-var Version = "Chi Calculator v2.7"
+var Version = "Chi Calculator v2.8"
 var License = "GNU GPL v3 or later"
 var Other = "Chimbal";
 
