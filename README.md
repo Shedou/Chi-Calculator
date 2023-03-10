@@ -4,7 +4,8 @@
 Chi Calculator
 
 ### Description
-An unusual cross-platform calculator.
+An unusual cross-platform calculator.\
+It's not a scientific calculator!
 
 ### System requirements:
 - Windows 7 or newer (32-Bit/64-Bit).
@@ -73,7 +74,7 @@ along with this program.  If not, see https://www.gnu.org/licenses/.
 GODOT Engine - https://godotengine.org/license
 
 ### Other licenses
-Any third party programs are subject to their own licenses.
+Any third party are subject to their own licenses.
 
 ### Project status
 In the work.
