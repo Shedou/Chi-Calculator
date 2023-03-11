@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/main.gd" type="Script" id=1]
 [ext_resource path="res://Theme_Buttons_Ops.tres" type="Theme" id=2]
@@ -14,9 +14,21 @@
 [ext_resource path="res://Scripts/Settings.gd" type="Script" id=12]
 [ext_resource path="res://Img/bg50.webp" type="Texture" id=13]
 [ext_resource path="res://Theme_Text_very_small.tres" type="Theme" id=14]
+[ext_resource path="res://FreeMono/FreeMonospaced.otf" type="DynamicFontData" id=15]
+[ext_resource path="res://Img/bgGray.webp" type="Texture" id=16]
+
+[sub_resource type="DynamicFont" id=1]
+size = 1
+font_data = ExtResource( 15 )
 
 [node name="Calculator" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 8.0
+margin_top = 6.0
+margin_right = 411.0
+margin_bottom = 63.0
 
 [node name="Container" type="Control" parent="."]
 margin_right = 420.0
@@ -35,10 +47,19 @@ __meta__ = {
 }
 
 [node name="Background" type="Panel" parent="Container/Number"]
+visible = false
 margin_left = -6.0
 margin_top = -6.0
 margin_right = 226.0
 margin_bottom = 226.0
+
+[node name="Background2" type="TextureRect" parent="Container/Number"]
+margin_left = -6.0
+margin_top = -6.0
+margin_right = 226.0
+margin_bottom = 226.0
+texture = ExtResource( 16 )
+expand = true
 
 [node name="Num_1" type="Button" parent="Container/Number"]
 margin_top = 120.0
@@ -164,10 +185,19 @@ __meta__ = {
 }
 
 [node name="Background" type="Panel" parent="Container/TextIO"]
+visible = false
 margin_left = -6.0
 margin_top = -6.0
 margin_right = 386.0
 margin_bottom = 96.0
+
+[node name="Background2" type="TextureRect" parent="Container/TextIO"]
+margin_left = -6.0
+margin_top = -6.0
+margin_right = 386.0
+margin_bottom = 96.0
+texture = ExtResource( 16 )
+expand = true
 
 [node name="Text_Input" type="TextEdit" parent="Container/TextIO"]
 margin_right = 340.0
@@ -202,10 +232,19 @@ __meta__ = {
 }
 
 [node name="Background" type="Panel" parent="Container/Operand"]
+visible = false
 margin_left = -6.0
 margin_top = -6.0
 margin_right = 146.0
 margin_bottom = 226.0
+
+[node name="Background2" type="TextureRect" parent="Container/Operand"]
+margin_left = -6.0
+margin_top = -6.0
+margin_right = 146.0
+margin_bottom = 226.0
+texture = ExtResource( 16 )
+expand = true
 
 [node name="Multiple" type="Button" parent="Container/Operand"]
 margin_right = 60.0
@@ -412,24 +451,55 @@ margin_left = 90.0
 margin_top = 350.0
 margin_right = 200.0
 margin_bottom = 390.0
+focus_mode = 0
 theme = ExtResource( 7 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
 text = "Close"
+
+[node name="Settings_BTN_SysInfo" type="Button" parent="Settings"]
+margin_left = 270.0
+margin_top = 20.0
+margin_right = 410.0
+margin_bottom = 70.0
+focus_mode = 0
+theme = ExtResource( 10 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "System Info"
+
+[node name="Settings_SecretButton" type="Button" parent="Settings"]
+margin_left = 20.0
+margin_top = 417.0
+margin_right = 50.0
+margin_bottom = 429.0
+focus_mode = 0
+custom_fonts/font = SubResource( 1 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+flat = true
 
 [node name="Settings_BTN_Save" type="Button" parent="Settings"]
 margin_left = 240.0
 margin_top = 350.0
 margin_right = 350.0
 margin_bottom = 390.0
+focus_mode = 0
 theme = ExtResource( 7 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
 text = "Save"
 
-[node name="Label" type="Label" parent="Settings"]
-margin_left = 35.0
-margin_top = 46.0
-margin_right = 360.0
-margin_bottom = 116.0
-theme = ExtResource( 14 )
-text = "gg"
+[node name="Settings_BTN_Color_Edit" type="Button" parent="Settings"]
+margin_left = 110.0
+margin_top = 100.0
+margin_right = 320.0
+margin_bottom = 140.0
+focus_mode = 0
+theme = ExtResource( 7 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Background Color"
 
 [node name="Label2" type="Label" parent="Settings"]
 margin_left = 33.0
@@ -446,6 +516,73 @@ margin_right = 361.0
 margin_bottom = 339.0
 theme = ExtResource( 14 )
 text = "gg"
+
+[node name="OS" type="TextEdit" parent="Settings"]
+margin_left = 10.0
+margin_top = 20.0
+margin_right = 260.0
+margin_bottom = 45.0
+theme = ExtResource( 14 )
+text = " Operation System"
+shortcut_keys_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Device" type="TextEdit" parent="Settings"]
+margin_left = 10.0
+margin_top = 45.0
+margin_right = 260.0
+margin_bottom = 70.0
+theme = ExtResource( 14 )
+text = " Device Name"
+shortcut_keys_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Color" type="Control" parent="Settings"]
+visible = false
+margin_right = 420.0
+margin_bottom = 440.0
+
+[node name="Background" type="TextureRect" parent="Settings/Color"]
+margin_right = 420.0
+margin_bottom = 440.0
+texture = ExtResource( 13 )
+stretch_mode = 2
+
+[node name="Settings_BTN_Color_Edit_Set" type="Button" parent="Settings/Color"]
+margin_left = 330.0
+margin_top = 10.0
+margin_right = 410.0
+margin_bottom = 160.0
+focus_mode = 0
+theme = ExtResource( 7 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Set"
+
+[node name="Settings_BTN_Color_Edit_Close" type="Button" parent="Settings/Color"]
+margin_left = 330.0
+margin_top = 280.0
+margin_right = 410.0
+margin_bottom = 430.0
+focus_mode = 0
+theme = ExtResource( 7 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+text = "Close"
+
+[node name="ColorPicker" type="ColorPicker" parent="Settings/Color"]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 320.0
+margin_bottom = 430.0
+color = Color( 0.294118, 0.294118, 0.294118, 1 )
+edit_alpha = false
+presets_enabled = false
+presets_visible = false
 
 [connection signal="pressed" from="Container/Number/Num_1" to="." method="_on_Num_1_pressed"]
 [connection signal="pressed" from="Container/Number/Num_2" to="." method="_on_Num_2_pressed"]
@@ -475,4 +612,9 @@ text = "gg"
 [connection signal="pressed" from="About/Links/Link_Git" to="." method="_on_Link_Git_pressed"]
 [connection signal="pressed" from="About/About_BTN_Close" to="About" method="_on_About_BTN_Close_pressed"]
 [connection signal="pressed" from="Settings/Settings_BTN_Close" to="Settings" method="_on_Settings_BTN_Close_pressed"]
+[connection signal="pressed" from="Settings/Settings_BTN_SysInfo" to="Settings" method="_on_Settings_BTN_SysInfo_pressed"]
+[connection signal="pressed" from="Settings/Settings_SecretButton" to="Settings" method="_on_Settings_SecretButton_pressed"]
 [connection signal="pressed" from="Settings/Settings_BTN_Save" to="Settings" method="_on_Settings_BTN_Save_pressed"]
+[connection signal="pressed" from="Settings/Settings_BTN_Color_Edit" to="Settings" method="_on_Settings_BTN_Color_Edit_pressed"]
+[connection signal="pressed" from="Settings/Color/Settings_BTN_Color_Edit_Set" to="Settings" method="_on_Settings_BTN_Color_Edit_Set_pressed"]
+[connection signal="pressed" from="Settings/Color/Settings_BTN_Color_Edit_Close" to="Settings" method="_on_Settings_BTN_Color_Edit_Close_pressed"]

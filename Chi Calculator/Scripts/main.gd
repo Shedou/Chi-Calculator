@@ -17,7 +17,7 @@
 extends Node2D
 
 # Version
-var Version = "Chi Calculator v2.8"
+var Version = "Chi Calculator v2.9"
 var License = "GNU GPL v3 or later"
 var Other = "Chimbal";
 
@@ -39,13 +39,28 @@ var chi_int_cAC: int = 0;	# Костыль для работы "C/AC"
 var Text_Input_Focus = 0;	# Наведен ли курсор на окно ввода
 var chi_na_temp;			# Временная переменная
 
+var chi_secret = 0;
+
 func _ready():
+	chi_load_settings();
+	
 	$Container/Version.text = Version;
 	$Container/License.text = License;
 	$About/Text/Name.text = Version;
 	$About/Text/License.text = License;
 	$About/Text/Other.text = Other;
 	
+func chi_load_settings():
+	var settings_path = str(OS.get_executable_path().get_base_dir()) + "/Settings/User_Settings.cfg";
+	var executable_path = OS.get_executable_path().get_base_dir();
+	var settings = ConfigFile.new();
+	var dir = Directory.new();
+	if dir.dir_exists(executable_path + "/Settings") == true:
+		var sett = settings.load(settings_path);
+		if sett == OK:
+			$Label.text = settings.get_value("Background", "BG_Color");
+			if settings.get_value("Background", "BG_Color") != null:
+				VisualServer.set_default_clear_color(Color(settings.get_value("Background", "BG_Color")));
 
 func add_buffer(numb):
 	chi_int_cAC = 0; # Костыль для правильной работы "C/AC"
