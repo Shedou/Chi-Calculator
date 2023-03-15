@@ -1,14 +1,8 @@
 extends Control
 
-var BG_Color = Color( 0.294118, 0.294118, 0.294118, 1 );
-
 func _ready():
-	chi_load_settings();
 	if OS.get_name() == "Android":
 		$Settings_BTN_Save.visible = false;
-
-var settings_path = str(OS.get_executable_path().get_base_dir()) + "/Settings/User_Settings.cfg";
-var executable_path = OS.get_executable_path().get_base_dir();
 
 func _on_Settings_BTN_Close_pressed():
 	visible = false;
@@ -20,23 +14,16 @@ func chi_save_settings():
 	var settings = ConfigFile.new();
 	var dir = Directory.new();
 	
-	if dir.dir_exists(executable_path + "/Settings") == false:
-		dir.open(executable_path);
+	if dir.dir_exists($"../".chi_executable_path + "/Settings") == false:
+		dir.open($"../".chi_executable_path);
 		dir.make_dir("Settings");
-		$Label2.text = settings_path;
-		$Label3.text = executable_path;
-		
-	settings.set_value("Background", "BG_Color", BG_Color)
-	settings.save(settings_path);
-
-func chi_load_settings():
-	var setti = ConfigFile.new();
-	var diro = Directory.new();
-	if diro.dir_exists(executable_path + "/Settings") == true:
-		var sett = setti.load(settings_path);
-		if sett == OK:
-			if setti.get_value("Background", "BG_Color") != null:
-				BG_Color = Color(setti.get_value("Background", "BG_Color"));
+		settings.set_value("Background", "BG_Color", $"../".chi_user_BG_Color);
+		settings.save($"../".chi_user_settings_path);
+		$Label2.text = "Created folder:\n" + $"../".chi_executable_path + "Created file:\n" + $"../".chi_user_settings_path;
+	else:
+		settings.set_value("Background", "BG_Color", $"../".chi_user_BG_Color)
+		settings.save($"../".chi_user_settings_path);
+		$Label2.text = "writed:\n" + $"../".chi_user_settings_path;
 
 func _on_Settings_BTN_SysInfo_pressed():
 	$Device.text = " " + OS.get_model_name(); # Название устройства
@@ -62,7 +49,7 @@ func _on_Settings_BTN_Color_Edit_Close_pressed():
 
 func _on_Settings_BTN_Color_Edit_Set_pressed():
 	VisualServer.set_default_clear_color($Color/ColorPicker.color);
-	BG_Color = Color($Color/ColorPicker.color);
+	$"../".chi_user_BG_Color = Color($Color/ColorPicker.color);
 
 
 

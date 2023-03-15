@@ -17,7 +17,7 @@
 extends Node2D
 
 # Version
-var Version = "Chi Calculator v2.9"
+var Version = "Chi Calculator v2.10"
 var License = "GNU GPL v3 or later"
 var Other = "Chimbal";
 
@@ -41,9 +41,18 @@ var chi_na_temp;			# Временная переменная
 
 var chi_secret = 0;
 
+# Переменные настроек пользователя
+var chi_executable_path = OS.get_executable_path().get_base_dir();
+var chi_user_settings_path = chi_executable_path + "/Settings/User_Settings.cfg";
+var chi_user_BG_Color = Color(0.301961, 0.301961, 0.301961, 1);
+
 func _ready():
-	chi_load_settings();
+	if OS.get_name() != "Android":
+		chi_load_settings();
+	chi_set_license();
 	
+
+func chi_set_license():
 	$Container/Version.text = Version;
 	$Container/License.text = License;
 	$About/Text/Name.text = Version;
@@ -51,16 +60,20 @@ func _ready():
 	$About/Text/Other.text = Other;
 	
 func chi_load_settings():
-	var settings_path = str(OS.get_executable_path().get_base_dir()) + "/Settings/User_Settings.cfg";
-	var executable_path = OS.get_executable_path().get_base_dir();
 	var settings = ConfigFile.new();
 	var dir = Directory.new();
-	if dir.dir_exists(executable_path + "/Settings") == true:
-		var sett = settings.load(settings_path);
-		if sett == OK:
-			$Label.text = settings.get_value("Background", "BG_Color");
-			if settings.get_value("Background", "BG_Color") != null:
-				VisualServer.set_default_clear_color(Color(settings.get_value("Background", "BG_Color")));
+	if dir.dir_exists(chi_executable_path + "/Settings") == true && dir.file_exists(chi_user_settings_path) == true:
+		var chi_load_settings_temp = settings.load(chi_user_settings_path);
+		if chi_load_settings_temp == OK:
+			chi_user_BG_Color = settings.get_value("Background", "BG_Color");
+			$Settings/Color/ColorPicker.color = chi_user_BG_Color;
+			VisualServer.set_default_clear_color(chi_user_BG_Color);
+			$Label.text = "User settings loaded.";
+			yield(get_tree().create_timer(6.0), "timeout")
+			$Label.visible = false;
+	$Label.text = "\"" + chi_user_settings_path + "\" - Not found!";
+	yield(get_tree().create_timer(10.0), "timeout")
+	$Label.visible = false;
 
 func add_buffer(numb):
 	chi_int_cAC = 0; # Костыль для правильной работы "C/AC"

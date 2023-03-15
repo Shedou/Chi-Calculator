@@ -1,12 +1,14 @@
 Software used to create parts of the project.
 ================================================================
-Godot Engine v3.5.1 - https://godotengine.org
+Godot Engine v3.5.1 and 3.5.2 - https://godotengine.org
 - Project and code.
 ================================================================
 Krita 5.1.5 - https://krita.org/en
 - icon.png - ver. 2023-02-17, MD5: E81956F9E49180CE4034E84CD9A7E870, Размер: 24333 байтов (23 KiB).
+- icon.png - ver. 2023-03-15, MD5: 28834B981CA17087F4B26C61EB5DC94A, Размер: 23256 байтов (22 KiB).
 - And other.
 ================================================================
 Quick Any2Ico - https://www.carifred.com/quick_any2ico/
 - icon.ico - ver. 2023-02-17, MD5: 6CE9117629910C170F011583103C6621, Размер: 49399 байтов (48 KiB).
+- icon.ico - ver. 2023-03-15, MD5: 2A3B0B57AA836439557ABD1A151645DE, Размер: 51238 байтов (50 KiB).
 ================================================================
