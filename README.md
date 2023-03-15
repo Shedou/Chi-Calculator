@@ -45,7 +45,7 @@ It's not a scientific calculator!
 ### Usage Android:
 - Install APK and use.
 
-### Visuals
+### Visuals:
 ![VirtualBox_(x64) ubuntu 13 04 - desktop-amd64_15_03_2023_13_11_10](https://user-images.githubusercontent.com/19572158/225266762-90005b49-b2a5-4238-a37b-ee9ccbd6d93f.png)
 ![vb](https://user-images.githubusercontent.com/19572158/225267127-debadd12-c517-4085-9809-23b73470334e.png)
 ![mb](https://user-images.githubusercontent.com/19572158/225269465-c70c97a8-fbae-42e9-9ec1-ec62e8d49aaf.JPG)
