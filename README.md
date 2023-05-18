@@ -1,4 +1,4 @@
-# Chi-Calculator
+# Chi-Calculator [![Github Releases](https://img.shields.io/github/downloads/Shedou/Chi-Calculator/total.svg)](https://github.com/Shedou/Chi-Calculator/releases)
 
 ### Name
 Chi Calculator
